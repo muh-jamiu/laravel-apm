@@ -1,0 +1,32 @@
+{
+    "name": "phptelexapm/errormonitor",
+    "description": "A Laravel package for monitoring errors",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Ganiu Jamiu",
+        "email": "ganiujamiu03@example.com"
+      }
+    ],
+    "require": {
+      "php": "^8.2",
+      "laravel/framework": "^11.9",
+      "laravel/tinker": "^2.9"
+    },
+    "autoload": {
+      "psr-4": {
+        "PHPTelexAPM\\ErrorMonitor\\": "src/"
+      }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "PHPTelexAPM\\ErrorMonitor\\ErrorMonitorServiceProvider"
+        ]
+      }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+  }
+  
