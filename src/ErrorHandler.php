@@ -32,7 +32,7 @@ class ErrorHandler
             $telex_msg .= $key . ': ' . $value . "\n";
         }
 
-        Log::error($telex_msg, $status_code);
+        Log::error($telex_msg);
 
         if ($status_code == 404) {
             $this->notFoundExceptionNotification($telex_msg);
