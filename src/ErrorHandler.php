@@ -85,10 +85,10 @@ class ErrorHandler
     public function otherUnhandleErrors($telex_msg){
         try {
             
-            $webhookUrl = Config::get('errormonitor.DEFAULT_WEBHOOK_URL');
+            $webhookUrl = Config::get('errormonitor.500_errors');
             $app_name = Config::get('errormonitor.app_name');
         
-            $this->TelexNotification($webhookUrl, "Unhanlded Error - 500", $telex_msg, "error",  $app_name);    
+            $this->TelexNotification($webhookUrl, "Unhandled Error - 500", $telex_msg, "error",  $app_name);    
 
         } catch (Throwable $ex) {            
             Log::error($ex->getMessage());
